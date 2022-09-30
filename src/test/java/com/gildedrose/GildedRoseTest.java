@@ -6,6 +6,13 @@ import static org.hamcrest.Matchers.*;
 
 class GildedRoseTest {
 
+  public static String vest = "+5 Dexterity Vest";
+  public static String brie = "Aged Brie";
+  public static String elixir = "Elixir of the Mongoose";
+  public static String sulfuras = "Sulfuras, Hand of Ragnaros";
+  public static String concert = "Backstage passes to a TAFKAL80ETC concert";
+  public static String conjured = "Conjured Mana Cake";
+
   @Test
   @DisplayName("Test that values are changed correctly")
   void valueTest() {
@@ -14,7 +21,7 @@ class GildedRoseTest {
     app.updateQuality();
     assertThat(element.name, is("foo"));
     assertThat(element.sellIn, is(1));
-    assertThat(element.quality, is(19));
+    assertThat(element.quality, is(19)); 
 
   }
 
@@ -60,6 +67,7 @@ class GildedRoseTest {
     Item item2 = new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20);
     Item item3 = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 20);
     Item item4 = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 20);
+    Item item5 = new Item("Backstage passes to a TAFKAL80ETC concert", 20, 50);
 
     GildedRose app = new GildedRose(new Item[] {item1, item2, item3, item4});
     app.updateQuality();
@@ -71,8 +79,23 @@ class GildedRoseTest {
     assertThat(item3.quality, is(23));
     assertThat(item4.sellIn, is(-1));
     assertThat(item4.quality, is(0));
+    assertThat(item5.quality, is(50));
+
   }
 
-  
+  @Test
+  @DisplayName("Test that default element is changed correctly")
+  void VestTest() {
+    Item element1 = new Item(vest, 2, 50);
+    Item element2 = new Item(vest, 0, 50);
+    Item element3 = new Item(vest, -2, 6);
+
+    GildedRose app = new GildedRose(new Item[] {element1, element2, element3});
+    app.updateQuality();
+    assertThat(element1.quality, is(49));
+    assertThat(element2.quality, is(48));
+    assertThat(element3.quality, is(4));
+  }
 
 }
+
