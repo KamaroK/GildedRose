@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.gildedrose.GildedRoseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-09-23T13:15:52" hostname="turing.local.isima.fr" time="0.017">
+  <properties/>
+  <testcase name="Test that values are changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.013"/>
+  <testcase name="Test that Aged Brie is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality don't exceed 50" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that Backstage passes to a TAFKAL80ETC concert is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that Sulfuras, Hand of Ragnaros is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
