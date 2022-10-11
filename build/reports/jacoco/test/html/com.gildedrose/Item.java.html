@@ -14,9 +14,50 @@ public class Item {
 <span class="fc" id="L14">        this.quality = quality;</span>
 <span class="fc" id="L15">    }</span>
 
+    private void incQuality() {
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (this.quality &lt; 50) this.quality += 1;</span>
+<span class="fc" id="L19">    }</span>
+
+    private void decQuality() {
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">        if (this.quality &gt; 0) this.quality -= 1;</span>
+<span class="fc" id="L23">    }</span>
+
+    public void updateQuality() {
+<span class="fc" id="L26">        sellIn -= 1;</span>
+
+<span class="pc bpc" id="L28" title="1 of 5 branches missed.">        switch (name) {</span>
+            case &quot;Sulfuras, Hand of Ragnaros&quot;:
+<span class="fc" id="L30">                sellIn = 0;</span>
+<span class="fc" id="L31">                quality = 80;</span>
+<span class="fc" id="L32">                break;</span>
+
+            case &quot;Aged Brie&quot;:
+<span class="fc" id="L35">                this.incQuality();</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">                if (sellIn &lt; 0) this.incQuality();</span>
+                break;
+
+            case &quot;Backstage passes to a TAFKAL80ETC concert&quot;:
+<span class="fc" id="L40">                this.incQuality();</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                if (sellIn &lt; 11) this.incQuality();</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">                if (sellIn &lt; 6) this.incQuality();</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">                if (sellIn &lt; 0) quality = 0;</span>
+                break;
+
+            case &quot;Conjured Mana Cake&quot;:
+<span class="nc" id="L47">                break;</span>
+
+            default :
+<span class="fc" id="L50">                this.decQuality();</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">                if (sellIn &lt; 0) this.decQuality();</span>
+
+        }
+<span class="fc" id="L54">    }</span>
+
+     
+
    @Override
    public String toString() {
-<span class="nc" id="L19">        return this.name + &quot;, &quot; + this.sellIn + &quot;, &quot; + this.quality;</span>
+<span class="nc" id="L60">        return this.name + &quot;, &quot; + this.sellIn + &quot;, &quot; + this.quality;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
