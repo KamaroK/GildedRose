@@ -67,20 +67,20 @@ class GildedRoseTest {
     Item item2 = new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20);
     Item item3 = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 20);
     Item item4 = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 20);
-    Item item5 = new Item("Backstage passes to a TAFKAL80ETC concert", 20, 50);
 
     GildedRose app = new GildedRose(new Item[] {item1, item2, item3, item4});
     app.updateQuality();
     assertThat(item1.sellIn, is(14));
     assertThat(item1.quality, is(21));
+
     assertThat(item2.sellIn, is(9));
     assertThat(item2.quality, is(22));
+
     assertThat(item3.sellIn, is(4));
     assertThat(item3.quality, is(23));
+
     assertThat(item4.sellIn, is(-1));
     assertThat(item4.quality, is(0));
-    assertThat(item5.quality, is(50));
-
   }
 
   @Test
