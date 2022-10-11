@@ -47,13 +47,10 @@ class GildedRoseTest {
   @DisplayName("Test that Sulfuras, Hand of Ragnaros is changed correctly")
   void sulfurasTest() {
     Item element = new Item("Sulfuras, Hand of Ragnaros", 0, 80);
-    Item element1 = new Item("Sulfuras, Hand of Ragnaros", 0, 0);
-    GildedRose app = new GildedRose(new Item[] {element, element1});
+    GildedRose app = new GildedRose(new Item[] {element});
     app.updateQuality();
     assertThat(element.sellIn, is(0));
     assertThat(element.quality, is(80));
-    
-    assertThat(element1.quality, is(0));
   }
 
   @Test
