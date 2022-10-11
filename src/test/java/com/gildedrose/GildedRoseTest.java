@@ -47,10 +47,13 @@ class GildedRoseTest {
   @DisplayName("Test that Sulfuras, Hand of Ragnaros is changed correctly")
   void sulfurasTest() {
     Item element = new Item("Sulfuras, Hand of Ragnaros", 0, 80);
-    GildedRose app = new GildedRose(new Item[] {element});
+    Item element1 = new Item("Sulfuras, Hand of Ragnaros", 0, 0);
+    GildedRose app = new GildedRose(new Item[] {element, element1});
     app.updateQuality();
     assertThat(element.sellIn, is(0));
     assertThat(element.quality, is(80));
+    
+    assertThat(element1.quality, is(0));
   }
 
   @Test
@@ -60,17 +63,39 @@ class GildedRoseTest {
     Item item2 = new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20);
     Item item3 = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 20);
     Item item4 = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 20);
+    Item item5 = new Item("Backstage passes to a TAFKAL80ETC concert", 20, 50);
 
     GildedRose app = new GildedRose(new Item[] {item1, item2, item3, item4});
     app.updateQuality();
     assertThat(item1.sellIn, is(14));
     assertThat(item1.quality, is(21));
+
     assertThat(item2.sellIn, is(9));
     assertThat(item2.quality, is(22));
+
     assertThat(item3.sellIn, is(4));
     assertThat(item3.quality, is(23));
+
     assertThat(item4.sellIn, is(-1));
     assertThat(item4.quality, is(0));
+
+    assertThat(item5.quality, is(50));
+  }
+
+  @Test
+  @DisplayName("Test that default element is changed correctly")
+  void VestTest() {
+    Item element1 = new Item("+5 Dexterity Vest", 2, 50);
+    Item element2 = new Item("+5 Dexterity Vest", 0, 50);
+    Item element3 = new Item("+5 Dexterity Vest", -2, 6);
+    Item element4 = new Item("+5 Dexterity Vest", 5, 0);
+
+    GildedRose app = new GildedRose(new Item[] {element1, element2, element3});
+    app.updateQuality();
+    assertThat(element1.quality, is(49));
+    assertThat(element2.quality, is(48));
+    assertThat(element3.quality, is(4));
+    assertThat(element4.quality, is(0));
   }
 
   
