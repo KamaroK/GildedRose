@@ -13,6 +13,11 @@ public class UpdateTool {
     }};
 
     public static void updateQuality(Item item) {
-        
+        Update updatedItem = getUpdate(item);
+        //Sending the item to the method that is doing the update //updatedItem.updateQuality(item);
+    }
+
+    private static Update getUpdate(Item item) {
+        return SPECIFIC_UPDATE.getOrDefault(item.name, DEFAULT_UPDATE);
     }
 }
