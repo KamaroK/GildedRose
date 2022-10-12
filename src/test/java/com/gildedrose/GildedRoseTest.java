@@ -40,8 +40,8 @@ class GildedRoseTest {
   @Test
   @DisplayName("Test that Aged Brie is changed correctly")
   void agedBrieTest() {
-    Item element1 = new Item("Aged Brie", 2, 0);
-    Item element2 = new Item("Aged Brie", 0, 0);
+    Item element1 = new Item(brie, 2, 0);
+    Item element2 = new Item(brie, 0, 0);
     GildedRose app = new GildedRose(new Item[] {element1, element2});
     app.updateQuality();
     assertThat(element1.sellIn, is(1));
@@ -53,7 +53,7 @@ class GildedRoseTest {
   @Test
   @DisplayName("Test that Sulfuras, Hand of Ragnaros is changed correctly")
   void sulfurasTest() {
-    Item element = new Item("Sulfuras, Hand of Ragnaros", 0, 80);
+    Item element = new Item(sulfuras, 0, 80);
     GildedRose app = new GildedRose(new Item[] {element});
     app.updateQuality();
     assertThat(element.sellIn, is(0));
@@ -63,10 +63,10 @@ class GildedRoseTest {
   @Test
   @DisplayName("Test that Backstage passes to a TAFKAL80ETC concert is changed correctly")
   void backstageTest() {
-    Item item1 = new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20);
-    Item item2 = new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20);
-    Item item3 = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 20);
-    Item item4 = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 20);
+    Item item1 = new Item(concert, 15, 20);
+    Item item2 = new Item(concert, 10, 20);
+    Item item3 = new Item(concert, 5, 20);
+    Item item4 = new Item(concert, 0, 20);
 
     GildedRose app = new GildedRose(new Item[] {item1, item2, item3, item4});
     app.updateQuality();
