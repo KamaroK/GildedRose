@@ -26,6 +26,20 @@ class GildedRoseTest {
   }
 
   @Test
+  @DisplayName("Test that default element is changed correctly")
+  void VestTest() {
+    Item element1 = new Item(vest, 2, 50);
+    Item element2 = new Item(vest, 0, 50);
+    Item element3 = new Item(vest, -2, 6);
+
+    GildedRose app = new GildedRose(new Item[] {element1, element2, element3});
+    app.updateQuality();
+    assertThat(element1.quality, is(49));
+    assertThat(element2.quality, is(48));
+    assertThat(element3.quality, is(4));
+  }
+
+  @Test
   @DisplayName("Test that quality don't exceed 50")
   void QualityTest() {
     Item element1 = new Item("Aged Brie", 2, 50);
@@ -83,19 +97,7 @@ class GildedRoseTest {
     assertThat(item4.quality, is(0));
   }
 
-  @Test
-  @DisplayName("Test that default element is changed correctly")
-  void VestTest() {
-    Item element1 = new Item(vest, 2, 50);
-    Item element2 = new Item(vest, 0, 50);
-    Item element3 = new Item(vest, -2, 6);
 
-    GildedRose app = new GildedRose(new Item[] {element1, element2, element3});
-    app.updateQuality();
-    assertThat(element1.quality, is(49));
-    assertThat(element2.quality, is(48));
-    assertThat(element3.quality, is(4));
-  }
 
 }
 
