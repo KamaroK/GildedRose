@@ -44,6 +44,12 @@ public class Item {
                 break;
 
             case "Conjured Mana Cake":
+                this.decQuality();
+                this.decQuality();
+                if(sellIn < 0) {
+                    this.decQuality();
+                    this.decQuality();
+                }
                 break;
 
             default :
