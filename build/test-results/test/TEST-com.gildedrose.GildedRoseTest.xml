@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite name="com.gildedrose.GildedRoseTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-10-01T16:22:58" hostname="HP-PC" time="0.264">
   <properties/>
   <testcase name="Test that default element is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.222"/>
@@ -10,11 +11,14 @@
   <testcase name="Test that Sulfuras, Hand of Ragnaros is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.003"/>
 =======
 <testsuite name="com.gildedrose.GildedRoseTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-10-11T10:10:32" hostname="vm-etu-aaabdoulay.local.isima.fr" time="0.049">
+=======
+<testsuite name="com.gildedrose.GildedRoseTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-10-12T10:40:52" hostname="vm-etu-aaabdoulay.local.isima.fr" time="0.057">
+>>>>>>> 3061820003a528c3403a29889d93a799660d9cc2
   <properties/>
-  <testcase name="Test that default element is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.028"/>
-  <testcase name="Test that values are changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that Aged Brie is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality don't exceed 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that default element is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.035"/>
+  <testcase name="Test that values are changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="Test that Aged Brie is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.003"/>
+  <testcase name="Test that quality don't exceed 50" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
   <testcase name="Test that Backstage passes to a TAFKAL80ETC concert is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that Sulfuras, Hand of Ragnaros is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
 >>>>>>> d38148c7ade8a558541b337e81f34166e8b9d9ab
