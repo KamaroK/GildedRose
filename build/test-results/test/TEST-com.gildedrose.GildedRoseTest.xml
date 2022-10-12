@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-10-12T17:00:26" hostname="HP-PC" time="0.039">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-10-12T17:10:40" hostname="HP-PC" time="0.056">
   <properties/>
-  <testcase name="Test that default element is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.024"/>
+  <testcase name="Test that default element is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.043"/>
+  <testcase name="Test that Conjured Mana is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that values are changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that Aged Brie is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality don't exceed 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that Aged Brie is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality don't exceed 50" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that Backstage passes to a TAFKAL80ETC concert is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that Sulfuras, Hand of Ragnaros is changed correctly" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>

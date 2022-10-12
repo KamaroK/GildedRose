@@ -97,7 +97,15 @@ class GildedRoseTest {
     assertThat(item4.quality, is(0));
   }
 
-
+  @Test
+  @DisplayName("Test that Conjured Mana is changed correctly")
+  void conjuredTest() {
+    Item element = new Item(conjured, 3, 50);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+    assertThat(element.sellIn, is(2));
+    assertThat(element.quality, is(48));
+  }
 
 }
 
