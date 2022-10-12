@@ -7,6 +7,7 @@ public class Item {
     public int sellIn;
 
     public int quality;
+    
 
     public Item(String name, int sellIn, int quality) {
         this.name = name;
@@ -44,6 +45,12 @@ public class Item {
                 break;
 
             case "Conjured Mana Cake":
+                this.decQuality();
+                this.decQuality();
+                if(sellIn < 0) {
+                    this.decQuality();
+                    this.decQuality();
+                }
                 break;
 
             default :
